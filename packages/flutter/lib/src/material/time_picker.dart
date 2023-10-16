@@ -700,8 +700,8 @@ class _AmPmButton extends StatelessWidget {
 
     return Material(
       color: resolvedBackgroundColor,
-      child: InkWell(
-        onTap: Feedback.wrapForTap(onPressed, context),
+      child: TextButton(
+        onPressed: Feedback.wrapForTap(onPressed, context),
         child: Semantics(
           checked: selected,
           inMutuallyExclusiveGroup: true,
